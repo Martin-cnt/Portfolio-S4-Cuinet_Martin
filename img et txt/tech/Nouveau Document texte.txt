@@ -1,0 +1,100 @@
+Savoir‑faire techniques (5)
+
+0.Concevoir des interfaces utilisateur avec Figma en respectant une charte graphique
+Création de maquettes fonctionnelles
+Organisation des écrans et des parcours utilisateurs
+Respect et application d’une charte graphique (couleurs, typographie, UI)
+Cohérence entre maquettes et application finale
+👉 Exemple : maquettes intégrées au cahier des charges puis utilisées pour le développement
+
+1. Développer une application web avec PHP Symfony
+Création de fonctionnalités backend (routes, contrôleurs, services)
+Utilisation du framework Symfony pour structurer le code (MVC)
+Gestion des formulaires et des échanges avec la base de données
+👉 Exemple : développement d’un module applicatif ou d’une fonctionnalité métier
+2. Concevoir et gérer une base de données avec phpMyAdmin
+Modélisation de tables et relations
+Manipulation de données (requêtes SQL)
+Administration via phpMyAdmin (import/export, modifications)
+👉 Exemple : création et gestion de base de données pour une application web
+
+3. Intégrer et exploiter des API / services externes
+Connexion à des services via API (REST, Webhooks)
+Transformation et exploitation de données
+Gestion des erreurs et des réponses
+👉 Exemple : utilisation d’API dans n8n ou autre outil pour enrichir un workflow
+4. Concevoir et automatiser des workflows métiers
+Création de processus automatisés avec n8n
+Structuration logique (enchaînement de tâches, conditions, triggers)
+Intégration de différentes sources (API, fichiers, outils internes)
+👉 Exemple : automatisation d’un flux de traitement ou de synchronisation de données
+
+Savoir‑faire en suivi de projet (version finale)
+1. Construire un projet à partir de zéro grâce à un cahier des charges
+Analyse des besoins sans base existante
+Rédaction d’un cahier des charges structuré (fonctionnel et technique)
+Définition des objectifs, contraintes et fonctionnalités
+Maquettes réalisées sur Figma, permettant de visualiser les fonctionnalités attendues et de structurer l’interface avant le développement.
+👉 ⭐ Point clé : Tu as lancé le projet de A à Z, ce qui inclut la phase la plus importante : le cadrage
+👉 Exemple : création d’un cahier des charges avant toute maquette ou développement
+2. Organiser et suivre le projet avec GitLab
+Mise en place d’un dépôt dès le début du projet
+Gestion des versions (commits, branches)
+Suivi de l’évolution et organisation du travail
+👉 Exemple : passage d’un projet vide à une application fonctionnelle avec historique des évolutions
+3. Piloter et faire évoluer le projet en continu
+Suivi de l’avancement des tâches
+Adaptation face aux contraintes techniques ou fonctionnelles
+Amélioration progressive (ex : ajout de workflows n8n, optimisation)
+👉 Exemple : évolution du projet entre une première version simple et une version améliorée
+
+Savoir‑faire d’intégration en entreprise (2)
+1. S’intégrer dans un environnement technique et professionnel
+Compréhension du contexte de travail (organisation, outils, projet)
+Prise en main rapide des technologies utilisées (Symfony, GitLab, n8n, outils internes…)
+Adaptation aux pratiques et méthodes de l’entreprise
+Communication avec les encadrants et les membres de l’équipe
+👉 Exemple : intégration dans un environnement où le projet était inexistant et appropriation des outils professionnels
+2. Faire preuve d’autonomie et être force de proposition
+Gestion autonome des tâches confiées
+Prise d’initiative dans les choix techniques et organisationnels
+Proposition d’améliorations (automatisation, structuration, optimisation)
+Contribution active à l’évolution du projet
+👉 Exemple : mise en place de solutions techniques (n8n, structuration du projet, choix d’outils) à partir de zéro
+
+Trace
+Figma + charte
+Symfony / dev web
+Base de données
+API
+Automatisation
+1. Workflow n8n + HTTP
+❌
+❌
+✅ (données manipulées)
+✅ ✅
+✅ ✅ ✅
+2. Entité Workflow (Symfony)
+❌
+✅ ✅
+✅ ✅ ✅
+❌
+❌
+3. Contrôleur Symfony
+✅ (indirect via vue)
+✅ ✅ ✅
+✅ ✅
+❌
+❌
+4. Interface (screen admin)
+✅ ✅ ✅
+✅
+✅
+❌
+✅ (lien workflows)
+5. Base phpMyAdmin (tables)
+❌
+✅ (via usage backend)
+✅ ✅ ✅ ✅
+❌
+❌
