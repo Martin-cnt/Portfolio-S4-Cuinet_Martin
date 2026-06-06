@@ -8,7 +8,7 @@ export const sections = {
         slug: 'trace-1', 
         label: 'Trace 1', 
         title: "Workflow n8n de redimensionnement d'image par IA",
-        image: 'public/img/workflow.png',
+        image: '/img/workflow.png',
         legend: "Trace 1 : workflow n8n de redimensionnement d'image par IA (GPT-Image-2) — workflow entier",
         skills: [
           { label: 'intégrer une API REST', color: '#ff6b6b' },
@@ -28,7 +28,7 @@ export const sections = {
         slug: 'trace-2', 
         label: 'Trace 2', 
         title: "Entité Workflow et modélisation ORM en PHP avec Symfony - ANT",
-        image: 'public/img/entite.png',
+        image: '/img/entite.png',
         legend: "Trace 2 : entité Workflow.php de l'application ANT — structure ORM avec ses propriétés et ses relations.",
         skills: [
           { label: 'définir et structurer des entités PHP', color: '#c084fc' },
@@ -38,7 +38,7 @@ export const sections = {
         ],
         content: [
           `La trace 2 présente le code de l'entité **Workflow.php** de l'application **ANT** (Application de centralisation et sécurisation des exécutions de workflows), développée durant le stage chez Vétoquinol. Avant ce projet, aucun outil centralisé n'existait pour gérer et déclencher les workflows n8n de l'entreprise : l'entité **Workflow** a donc été conçue comme le cœur du modèle de données, structurant toutes les informations nécessaires à l'exécution sécurisée d'un workflow et à son exposition aux utilisateurs. L'application repose sur le fait d'**utiliser le framework Symfony (MVC)**, dont l'architecture MVC impose une séparation claire entre la logique métier, la gestion des requêtes et la structure des données. Le fichier **Workflow.php** est une classe PHP annotée avec les attributs ORM de Doctrine, ce qui permet de mapper directement la classe à la table **workflows** en base de données sans écrire de SQL.`,
-          `Les propriétés de l'entité ont été définies avec soin afin de **définir et structurer des entités PHP** adaptées aux besoins métiers de Vétoquinol : **title** et **shortDescription** pour l'affichage, **generalDescription** pour le détail, **webhook_url** pour stocker l'URL du webhook n8n à déclencher lors de l'exécution, et **isVisible** pour contrôler la visibilité du workflow selon les droits des utilisateurs. Chaque propriété est annotée pour préciser son type, sa taille et ses contraintes directement dans le code, ce qui garantit un modèle cohérent et maintenable.`,
+          `Les propriétés de l'entité ont été définies avec soin afin de **définir et structurer des entités PHP** adaptées aux besoins métiers de Vétoquinol : **title** et **shortDescription** pour l'affichage, **generalDescription** pour le détail, **webhook_url** pour stocker l'URL du webhook n8n à déclencher lors de l'exécution, et **isVisible** pour contrôler la visibilité du workflow selon les droits des utilisateurs. Chaque propriété est annotée pour préciser son type, sa taille et ses contraintes directement dans le code, ce qui garantit un modèle cohérent et maintenable`,
           `Cette trace illustre également la nécessité de **modéliser des tables et relations** cohérentes : quatre relations ORM ont été définies pour couvrir l'ensemble des besoins fonctionnels. Une relation **ManyToOne** avec **TypeWorkflow** permet de catégoriser chaque workflow. Deux relations **ManyToMany** avec **Param** et **Groupe** permettent respectivement d'associer des paramètres configurables et de restreindre l'accès selon le groupe de l'utilisateur connecté. Enfin, une relation **OneToMany** avec **WorkflowExecution** conserve l'historique complet des exécutions passées.`,
           `Savoir **gérer les relations entre entités (ORM)** a été essentiel pour structurer cette base de données sans écrire de requêtes SQL manuellement. Doctrine génère automatiquement les jointures et les clés étrangères à partir des annotations PHP, ce qui simplifie considérablement le développement tout en maintenant l'intégrité des données. Ce choix architectural, rendu possible par la maîtrise d'**utiliser le framework Symfony (MVC)**, a permis de développer rapidement des fonctionnalités complexes comme le contrôle d'accès par groupe ou le suivi des exécutions.`,
         ],
@@ -47,7 +47,7 @@ export const sections = {
         slug: 'trace-3', 
         label: 'Trace 3', 
         title: "Schéma de la base de données de l'application ANT — phpMyAdmin",
-        image: 'public/img/BDD_phpmyadmin.png',
+        image: '/img/BDD_phpmyadmin.png',
         legend: "Trace 3 : schéma relationnel de la base de données de l'application ANT — tables et relations générées par Doctrine via phpMyAdmin.",
         skills: [
           { label: 'modéliser des tables et relations', color: '#A9A9A9' },
@@ -65,7 +65,7 @@ export const sections = {
         slug: 'trace-4', 
         label: 'Trace 4', 
         title: "Contrôleur d'exécution des workflows — WorkflowExecutionController.php",
-        image: 'public/img/route_controller.png',
+        image: '/img/route_controller.png',
         legend: "Trace 4 : WorkflowExecutionController.php de l'application ANT — routes, logique d'exécution et appel webhook vers n8n.",
         skills: [
           { label: 'créer des routes et contrôleurs Symfony', color: '#7FFF00' },
