@@ -21,36 +21,77 @@
       <article class="detail-main card">
         <div class="detail-kicker">{{ entry.label }}</div>
         <h2>{{ entry.title }}</h2>
-        <p>
-          Espace de sous-page simple et grand format pour la trace ou le bilan. Tu peux y mettre ton texte,
-          une image, une légende, et l’analyse du savoir-faire.
-        </p>
 
-        <div class="mini-card" style="margin-top:18px">
-          <strong>Zone de contenu</strong>
-          <span>Ajoute ici le détail de la trace, le visuel principal et ton explication.</span>
-        </div>
+        <!-- BILAN -->
+        <BilanPage v-if="entry.bilan" :bilan="entry.bilan" :skills="allSkills" />
+
+        <!-- TRACE NORMALE -->
+        <template v-else>
+          <div class="skills-row" v-if="entry.skills">
+            <strong>Savoir-faire élémentaires : </strong>
+            <span
+              v-for="skill in entry.skills"
+              :key="skill.label"
+              class="skill-badge"
+              :style="{ background: skill.color + '22', color: skill.color, border: '1px solid ' + skill.color + '44' }"
+            >
+              {{ skill.label }}
+            </span>
+          </div>
+
+          <div class="trace-content">
+            <div class="trace-image" v-if="entry.image">
+              <img :src="entry.image" :alt="entry.title">
+              <p class="trace-legend" v-if="entry.legend">{{ entry.legend }}</p>
+            </div>
+            <div class="trace-text">
+              <p v-for="(para, i) in entry.content" :key="i" v-html="renderContent(para)"></p>
+            </div>
+          </div>
+        </template>
+
       </article>
     </div>
   </section>
 </template>
 
 <script>
+import BilanPage from './BilanPage.vue'
+
 export default {
   name: 'TracePage',
+  components: { BilanPage },
   props: {
-    section: {
-      type: Object,
-      required: true
-    },
-    entry: {
-      type: Object,
-      required: true
+    section: { type: Object, required: true },
+    entry: { type: Object, required: true }
+  },
+  computed: {
+    allSkills() {
+      const seen = new Set()
+      return this.section.tabs
+        .filter(t => t.skills)
+        .flatMap(t => t.skills)
+        .filter(skill => {
+          if (seen.has(skill.label)) return false
+          seen.add(skill.label)
+          return true
+        })
     }
   },
   methods: {
     tabPath(slug) {
       return `/${this.section.key}/${slug}`
+    },
+    renderContent(text) {
+      let result = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      if (this.entry.skills) {
+        this.entry.skills.forEach(skill => {
+          const escaped = skill.label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+          const regex = new RegExp(escaped, 'gi')
+          result = result.replace(regex, `<span class="skill-inline" style="color:${skill.color}; background:${skill.color}22; padding:2px 8px;">${skill.label}</span>`)
+        })
+      }
+      return result
     }
   }
 }
