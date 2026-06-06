@@ -1,10 +1,18 @@
 <template>
-  <section class="page">
-    <h1>Intégration en entreprise</h1>
-    <p>Informations sur l'intégration en entreprise et retours d'expérience.</p>
-  </section>
+  <SectionPage :section="section" active-slug="trace-1" />
 </template>
 
 <script>
-export default { name: 'Integration' }
+import SectionPage from '../components/SectionPage.vue'
+
+export default {
+  name: 'Integration',
+  components: { SectionPage },
+  props: {
+    section: {
+      type: Object,
+      required: true
+    }
+  }
+}
 </script>

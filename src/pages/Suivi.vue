@@ -1,10 +1,18 @@
 <template>
-  <section class="page">
-    <h1>Suivi de projet</h1>
-    <p>Résumé des sous-pages et traces liées au suivi de projet.</p>
-  </section>
+  <SectionPage :section="section" active-slug="trace-1" />
 </template>
 
 <script>
-export default { name: 'Suivi' }
+import SectionPage from '../components/SectionPage.vue'
+
+export default {
+  name: 'Suivi',
+  components: { SectionPage },
+  props: {
+    section: {
+      type: Object,
+      required: true
+    }
+  }
+}
 </script>

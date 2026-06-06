@@ -1,20 +1,11 @@
 <template>
-  <section class="page">
-    <h1>Page d'accueil</h1>
-    <p class="intro">Introduction présentant le contenu et les objectifs du site.</p>
+  <section class="home-page">
+    <header class="section-hero card">
+      <h1>Portfolio BUT 2</h1>
+      <p>Une présentation simple, lisible et structurée pour accéder aux trois grandes parties du site.</p>
+    </header>
 
-    <h2>Contexte entreprise</h2>
-    <ul>
-      <li>Entreprise</li>
-      <li>Personnels impliqués et rôles</li>
-      <li>Moyens de travail</li>
-    </ul>
-
-    <h2>Contexte du sujet</h2>
-    <p>État initial, problèmes, enjeux et objectifs.</p>
-
-    <h2>Savoir-faire généraux</h2>
-    <p>Liste synthétique des savoir-faire mis en jeu (mettre en valeur ceux développés dans les autres pages).</p>
+    
   </section>
 </template>
 
