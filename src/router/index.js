@@ -1,5 +1,4 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Integration from '../pages/Integration.vue'
 import TracePage from '../components/TracePage.vue'
 import { getEntry, getSection, sections } from '../data/sectionConfig'
 import Home from '../pages/Home.vue'

@@ -34,7 +34,7 @@ export const sections = {
         slug: 'trace-2', 
         label: 'Trace 2', 
         title: "Entité Workflow et modélisation ORM en PHP avec Symfony - ANT",
-        image: '/img/entite.png',
+        image: entite,
         legend: "Trace 2 : entité Workflow.php de l'application ANT — structure ORM avec ses propriétés et ses relations.",
         skills: [
           { label: 'définir et structurer des entités PHP', color: '#c084fc' },
@@ -53,7 +53,7 @@ export const sections = {
         slug: 'trace-3', 
         label: 'Trace 3', 
         title: "Schéma de la base de données de l'application ANT — phpMyAdmin",
-        image: '/img/BDD_phpmyadmin.png',
+        image: bdd,
         legend: "Trace 3 : schéma relationnel de la base de données de l'application ANT — tables et relations générées par Doctrine via phpMyAdmin.",
         skills: [
           { label: 'modéliser des tables et relations', color: '#A9A9A9' },
@@ -71,7 +71,7 @@ export const sections = {
         slug: 'trace-4', 
         label: 'Trace 4', 
         title: "Contrôleur d'exécution des workflows — WorkflowExecutionController.php",
-        image: '/img/route_controller.png',
+        image: route,
         legend: "Trace 4 : WorkflowExecutionController.php de l'application ANT — routes, logique d'exécution et appel webhook vers n8n.",
         skills: [
           { label: 'créer des routes et contrôleurs Symfony', color: '#7FFF00' },
