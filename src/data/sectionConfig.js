@@ -1,3 +1,9 @@
+import workflow from '/public/img/workflow.png'
+import entite from '/public/img/entite.png'
+import bdd from '/public/img/BDD_phpmyadmin.png'
+import route from '/public/img/route_controller.png'
+
+
 export const sections = {
   technique: {
     key: 'technique',
@@ -8,7 +14,7 @@ export const sections = {
         slug: 'trace-1', 
         label: 'Trace 1', 
         title: "Workflow n8n de redimensionnement d'image par IA",
-        image: '/img/workflow.png',
+        image: workflow,
         legend: "Trace 1 : workflow n8n de redimensionnement d'image par IA (GPT-Image-2) — workflow entier",
         skills: [
           { label: 'intégrer une API REST', color: '#ff6b6b' },
@@ -82,7 +88,7 @@ export const sections = {
         ],
       },
       { 
-        slug: 'bilan des savoir-faire techniques', 
+        slug: 'bilan_des_savoir-faire_techniques', 
         label: 'Bilan et évaluation', 
         title: 'Bilan des savoir-faire techniques' 
       }

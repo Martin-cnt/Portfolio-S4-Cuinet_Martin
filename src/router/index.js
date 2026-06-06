@@ -1,10 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Home from '../pages/Home.vue'
-import Technique from '../pages/Technique.vue'
-import Suivi from '../pages/Suivi.vue'
 import Integration from '../pages/Integration.vue'
 import TracePage from '../components/TracePage.vue'
 import { getEntry, getSection, sections } from '../data/sectionConfig'
+import Home from '../pages/Home.vue'
 
 
 const sectionKeys = Object.keys(sections)
@@ -15,36 +13,29 @@ function buildSectionRoutes(sectionKey) {
     path: `/${sectionKey}/${tab.slug}`,
     name: `${sectionKey}-${tab.slug}`,
     component: TracePage,
-    props: {
-      section,
+    props: (route) => ({
+      section: getSection(sectionKey),
       entry: getEntry(sectionKey, tab.slug)
-    }
+    })
   }))
 }
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
   {
-    path: '/technique',
-    name: 'Technique',
-    component: Technique,
-    props: { section: getSection('technique') }
+  path: '/technique',
+  redirect: '/technique/trace-1'
   },
   {
     path: '/suivi',
-    name: 'Suivi',
-    component: Suivi,
-    props: { section: getSection('suivi') }
+    redirect: '/suivi/trace-5'
   },
   {
     path: '/integration',
-    name: 'Integration',
-    component: Integration,
-    props: { section: getSection('integration') }
+    redirect: '/integration/trace-8'
   },
-  
-  { path: '/:pathMatch(.*)*', redirect: '/' },
-  ...sectionKeys.flatMap(buildSectionRoutes)
+  ...sectionKeys.flatMap(buildSectionRoutes),
+  { path: '/:pathMatch(.*)*', redirect: '/' }
 ]
 
 const router = createRouter({
