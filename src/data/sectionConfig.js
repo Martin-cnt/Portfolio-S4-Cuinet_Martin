@@ -2,6 +2,8 @@ import workflow from '/public/img/workflow.png'
 import entite from '/public/img/entite.png'
 import bdd from '/public/img/BDD_phpmyadmin.png'
 import route from '/public/img/route_controller.png'
+import liste_commit from '/public/img/liste_commit.png'
+import cdc from '/public/img/cdc_ant.png'
 
 
 export const sections = {
@@ -121,8 +123,47 @@ export const sections = {
     title: 'Suivi de projet',
     intro: 'Cette partie présente les savoir-faire de suivi de projet développés pendant le stage.',
     tabs: [
-      { slug: 'trace-5', label: 'Trace 5', title: 'Planification' },
-      { slug: 'trace-6', label: 'Trace 6', title: "Suivi d'avancement" },
+      { 
+        slug: 'trace-5', 
+        label: 'Trace 5', 
+        title: "Historique des commits GitLab — application ANT",
+        image: liste_commit,
+        legend: "Trace 5 : historique des commits GitLab de l'application ANT — progression du développement du 20 au 26 mai 2026.",
+        skills: [
+          { label: 'utiliser GitLab pour versionner le projet', color: '#ff6b6b' },
+          { label: 'découper et organiser les tâches', color: '#4dd0a0' },
+          { label: "assurer l'amélioration continue", color: '#64b5f6' }
+        ],
+        content: [
+          `La trace 5 présente l'historique des commits GitLab du projet **ANT**, sur la période du 20 au 26 mai 2026, soit en milieu de projet, le développement et les commits ayant commencé le 12 mai 2026. Cet extrait illustre concrètement la mise en pratique d'**utiliser GitLab pour versionner le projet** : chaque modification significative du code est enregistrée sous forme de commit, constituant ainsi un historique complet et traçable de l'évolution du projet.`,
+          `Les 4 dates encadrées en bleu (20, 21, 22 et 26 mai) montrent une activité régulière et soutenue, avec plusieurs commits par jour. Cette cadence reflète une organisation rigoureuse du travail : le projet a progressé de façon continue, permettant de maintenir une vision claire de l'avancement à tout moment et de revenir précisément à un état antérieur si nécessaire. GitLab a ainsi joué le rôle d'outil central de suivi tout au long du développement.`,
+          `Chaque fonctionnalité du projet ANT a été isolée dans un commit ciblé et distinct, comme par exemple le commit du 20 mai "**tableau CRUD Admin resize pour petit écran**" encadré en rouge. Cette approche de **découper et organiser les tâches** a été appliquée tout au long du projet, facilitant le suivi de l'avancement, limitant les problèmes liés aux modifications (meilleurs suivis) et rendant l'historique lisible et exploitable.`,
+          `En cours de développement, certains commits ne correspondent pas à l'ajout d'une fonctionnalité mais à une amélioration du code existant. Le 22 mai, le commit"**changement repo en service pour historique**" restructure la logique d'accès aux données pour respecter les bonnes pratiques de l'architecture Symfony. Ce refactoring traduit une démarche d'**assurer l'amélioration continue** : il ne s'agit pas uniquement de d'implémenter une nouvelle fonctionnalité, mais de l'améliorer pour la rendre cohérente et maintenable.`,
+          `Dans la même logique, le 26 mai, le commit "**admin refonc**" marque une refonte complète de l'interface d'administration, repensée pour mieux répondre aux besoins identifiés au fil du développement. Ces deux commits illustrent la capacité à faire évoluer le projet de manière itérative en intégrant les retours et les nouvelles contraintes rencontrées, plutôt que de figer l'application à sa conception initiale.`
+        ]
+      },
+      { 
+        slug: 'trace-6', 
+        label: 'Trace 6', 
+        title: "Cahier des charges de l'application ANT",
+        image: cdc,
+        legend: "Trace 6 : extrait du cahier des charges de l'application ANT — définition du projet, objectifs, enjeux et périmètre.",
+        skills: [
+          { label: 'analyser les besoins métier', color: '#a78bfa' },
+          { label: 'rédiger un cahier des charges structuré', color: '#0000CD' },
+          { label: 'définir les contraintes et le périmètre', color: '#FF00FF' },
+          { label: "structurer un projet en l'absence d'existant", color: '#f59e0b' }
+        ],
+        content: [
+          `Avant toute phase de développement, aucun outil centralisé n'existait chez Vétoquinol pour gérer les workflows n8n,comme l'indique la section **2.5** : "Aucun élément existant à ce jour". La trace 6 est l'extrait du cahier des charges rédigé en tout début de stage pour **structurer un projet en l'absence d'existant**, en posant les fondations du projet à partir des seuls besoins exprimés par l'entreprise.`,
+
+          `J'ai du **analyser les besoins métier** avec mon maître de stage et Manuel (alternant en developpement d'applications spécifiques) pour aboutir à la section **2.1 Vision** et aux objectifs de l'entreprise : centraliser tous les workflows, contrôler les accès et assurer un suivi des exécutions. Ces besoins ont ensuite été traduits en objectifs technologiques concrets, notamment la restriction d'exécution aux utilisateurs autorisés et la convivialité des interfaces.`,
+
+          `La trace 6 démontre aussi la capacité à **rédiger un cahier des charges structuré** : le document est organisé en sections distinctes (vision, enjeux, périmètre, objectif fonctionnel), chacune répondant à une question précise. La section **2.2 Enjeux** synthétise les bénéfices attendus (gain de temps, facilité d'accès, contrôle et sécurité), tandis que la section **2.4 Objectif fonctionnel** définit précisément ce que l'application doit permettre de consulter, déclencher et suivre les workflows dans une application sécurisée. La section **2.4.1** détaille même la structure attendue de chaque workflow, posant les bases de la modélisation de données à venir.`,
+
+          `Enfin, les sections **2.3 Périmètre** et **2.4 Objectif fonctionnel** illustrent la capacité à **définir les contraintes et le périmètre** du projet : le périmètre limité par la problématique d'accessibilité, de sécurité et de dispersion des workflows n8n, garantissant un cadre précis avant d'entrer dans la phase de développement.`
+        ]
+      },
       { slug: 'trace-7', label: 'Trace 7', title: 'Communication' },
       { slug: 'bilan', label: 'Bilan', title: 'Bilan' }
     ]
