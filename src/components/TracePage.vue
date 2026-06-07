@@ -41,16 +41,24 @@
 
           <div class="trace-content">
             <div class="trace-image" v-if="entry.image">
-              <img :src="entry.image" :alt="entry.title">
+              <img :src="entry.image" :alt="entry.title" class="trace-img" @click="openImage(entry.image)">
               <p class="trace-legend" v-if="entry.legend">{{ entry.legend }}</p>
             </div>
-            <div class="trace-text">
-              <p v-for="(para, i) in entry.content" :key="i" v-html="renderContent(para)"></p>
+            <div class="trace-image" v-if="entry.image2">
+              <img :src="entry.image2" :alt="entry.title" class="trace-img" @click="openImage(entry.image2)">
+              <p class="trace-legend" v-if="entry.legend2">{{ entry.legend2 }}</p>
             </div>
+          </div><br>
+
+          <div class="trace-text">
+            <p v-for="(para, i) in entry.content" :key="i" v-html="renderContent(para)"></p>
           </div>
         </template>
 
       </article>
+      <div class="lightbox" v-if="lightboxSrc" @click="lightboxSrc = null">
+        <img :src="lightboxSrc" alt="zoom">
+      </div>
     </div>
   </section>
 </template>
@@ -64,6 +72,11 @@ export default {
   props: {
     section: { type: Object, required: true },
     entry: { type: Object, required: true }
+  },
+  data() {
+    return {
+      lightboxSrc: null
+    }
   },
   computed: {
     allSkills() {
@@ -81,6 +94,9 @@ export default {
   methods: {
     tabPath(slug) {
       return `/${this.section.key}/${slug}`
+    },
+    openImage(src) {
+      this.lightboxSrc = src
     },
     renderContent(text) {
       let result = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')

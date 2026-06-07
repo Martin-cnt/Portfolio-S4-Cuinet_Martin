@@ -4,6 +4,8 @@ import bdd from '/public/img/BDD_phpmyadmin.png'
 import route from '/public/img/route_controller.png'
 import liste_commit from '/public/img/liste_commit.png'
 import cdc from '/public/img/cdc_ant.png'
+import maquette from '/public/img/maquette.png'
+import img_maquette_finale from '/public/img/img_maquette_finale.png'
 
 
 export const sections = {
@@ -21,10 +23,11 @@ export const sections = {
         skills: [
           { label: 'intégrer une API REST', color: '#ff6b6b' },
           { label: 'transformer et exploiter des données', color: '#4dd0a0' },
-          { label: 'gérer les erreurs et les réponses', color: '#64b5f6' }
+          { label: 'gérer les erreurs et les réponses', color: '#64b5f6' },
+          { label: 'concevoir et automatiser des workflows', color: '#808000' }
         ],
         content: [
-          `La trace 1 est un workflow conçu sur l'outil **n8n** (plateforme de création de workflows automatisés grâce à des nœuds), qui permet le redimensionnement d'image par IA, que j'aidéveloppé durant mon stage chez Vétoquinol. Ce workflow s'inscrit dans le sujet principal de mon stage : l'automatisation de tâches redondantes via n8n, ici appliquée au traitement automatique d'images pour les équipes marketing de l'entreprise, qui on besoin de redimensionner régulièrement des visuels aux formats et résolutions imposés par leurs supports de communication.`,
+          `La trace 1 est un workflow conçu sur l'outil **n8n** (plateforme de création de workflows automatisés grâce à des nœuds), qui permet le redimensionnement d'image par IA, que j'aidéveloppé durant mon stage chez Vétoquinol. Ce workflow s'inscrit dans le sujet principal de mon stage : l'automatisation de tâches redondantes via n8n, ici appliquée au traitement automatique d'images pour les équipes marketing de l'entreprise, qui on besoin de redimensionner régulièrement des visuels aux formats et résolutions imposés par leurs supports de communication. Ce workflow montre que j'ai participé à **concevoir et automatiser des workflows** pour automatiser des tâches quotiennes ou hebdomadaires redondantes, pour faire gagner du temps aux équipes concernées.`,
           `Nous avons choisi l'API d'OpenAI car son modèle **GPT-Image-2** accessible depuis n8n, est l'un des meilleurs modèles pour éditer une image sans altéré son contenu. La création de ce workflow a nécessité de savoir **intégrer une API REST**. Le nœud **HTTP Request** visible sur la trace 1 envoie une requête POST à l'endpoint https://api.openai.com/v1/images/edits (flèche rouge), en transmettant l'image source, les dimensions cibles et la clé d'API en header. Ce modèle se distingue d'un simple redimensionnement mécanique par sa capacité à comprendre le contenu visuel et à le réajuster intelligemment selon les contraintes données.`,
           `Le workflow est déclenché via un **Webhook** : à la réception d'une requête du site, un nœud **JavaScript** génère un objet JSON structuré pour chaque image en entrée. Un nœud **Variables** y ajoute les paramètres fixes (modèle, clé API, résolution). L'image est ensuite convertie au format attendu par OpenAI via un nœud **Convertir image**, puis fusionnée avec l'ensemble des paramètres via un nœud **Merge** avant l'appel API.`,
           `Ce workflow implique deux phases de conversion distinctes, car j'ai dû **transformer et exploiter des données** à chaque étape : l'image source est d'abord encodée en **base64** (rectangle rouge) avant l'envoi à l'API, car c'est le format attendu par OpenAI, puis la réponse retournée, également en base64, est reconvertie en fichier binaire exploitable via un nœud **Convert** (rectangle rouge). Ce traitement en deux temps était indispensable pour assurer la compatibilité entre n8n et l'API OpenAI, et le résultat final est renvoyé au site via le nœud **Respond to Webhook**.`,
@@ -98,23 +101,23 @@ export const sections = {
     bilan: [
       {
         title: "Développer une application web avec PHP Symfony",
-        synthese: `Les savoir-faire élémentaires mobilisés autour de ce savoir-faire général sont **définir et structurer des entités PHP**, **utiliser le framework Symfony**, **modéliser des tables et relations**, **gérer les relations entre entités** et **créer des routes et contrôleurs Symfony**, mis en œuvre respectivement dans les traces 2 et 4. Ces compétences ont été apprises intégralement durant le stage, sans aucune base préalable en PHP ou Symfony : la courbe d'apprentissage a été importante, notamment pour comprendre l'architecture MVC, le système d'injection de dépendances et le fonctionnement de Doctrine ORM. Le développement complet de l'application ANT a cependant permis de consolider rapidement ces acquis en les appliquant sur un projet réel et complexe.`,
-        evaluation: `Avant le stage, je n'avais aucune expérience avec Symfony et PHP. Aujourd'hui, je me considère à un niveau correct voire bon : je suis capable de concevoir et développer une application web complète avec Symfony, de modéliser un schéma de base de données via Doctrine, et de structurer un projet selon les bonnes pratiques MVC. Des aspects comme la sécurité avancée ou l'optimisation des performances restent encore à approfondir, mais l'essentiel du framework est désormais maîtrisé.`
+        synthese: `Les savoir-faire élémentaires mobilisés autour de ce savoir-faire général sont **définir et structurer des entités PHP**, **utiliser le framework Symfony**, **modéliser des tables et relations**, **gérer les relations entre entités** et **créer des routes et contrôleurs Symfony**, mis en œuvre respectivement dans les traces 2 et 4. Ces compétences ont été acquises durant mon stage, avant celui-ci je n'avais aucune base en PHP ou Symfony : la courbe d'apprentissage a été importante, notamment pour comprendre l'architecture MVC, le système de routes et controllers et le fonctionnement de Doctrine ORM pour les entités. Le développement complet de l'application ANT m'a donc permis de comprendre et acquérir rapidement ces compétences en les appliquant sur un projet réel et complexe.`,
+        evaluation: `Avant le stage, je n'avais aucune expérience avec Symfony et PHP. Aujourd'hui, je me considère à un niveau correct voire bon : je suis capable de concevoir et développer une application web complète avec Symfony, de modéliser un schéma de base de données via Doctrine, et de structurer un projet selon les bonnes pratiques MVC. Des aspects comme la sécurité avancée ou l'optimisation des performances restent encore à approfondir, mais l'essentiel du framework est maîtrisé.`
       },
       {
         title: "Concevoir et gérer une base de données avec phpMyAdmin",
-        synthese: `Les savoir-faire élémentaires associés sont **modéliser des tables et relations**, **administrer une base de données via phpMyAdmin** et **générer et migrer une base de données avec Doctrine**, visibles sur la trace 3. Si SQL était déjà connu avant le stage grâce aux cours, phpMyAdmin et la gestion de migrations via Doctrine étaient en revanche totalement nouveaux. La principale difficulté a résidé dans la cohérence entre le modèle PHP et la structure SQL réelle, notamment lors des évolutions du schéma en cours de développement.`,
+        synthese: `Les savoir-faire élémentaires associés sont **modéliser des tables et relations**, **administrer une base de données via phpMyAdmin** et **générer et migrer une base de données avec Doctrine**, visibles sur la trace 3. Si j'avais déjà une base de notion en SQL avant le stage grâce aux cours, phpMyAdmin et la gestion de migrations via Doctrine étaient en revanche totalement nouveaux pour moi. La principale difficulté a résidé dans la cohérence entre le modèle PHP et la structure SQL réelle, notamment lors des évolutions du schéma en cours de développement.`,
         evaluation: `Mon niveau est passé de débutant à assez bon, car je ne connaissais pas phpMyAdmin, mais je savais gérer une base de données simple : je maîtrise désormais la conception d'un schéma relationnel complet, l'utilisation de phpMyAdmin pour administrer et déboguer une base de données, et le cycle de migration Doctrine. Il reste des aspects à approfondir comme l'optimisation des requêtes SQL sur de gros volumes de données.`
       },
       {
         title: "Intégrer et exploiter des API / services externes",
-        synthese: `Les savoir-faire élémentaires associés sont **intégrer une API REST**, **transformer et exploiter des données**, **gérer les erreurs et les réponses** et **appeler un service externe via HTTP**, présents dans les traces 1 et 4. Une légère base existait avant le stage, mais l'intégration de l'API OpenAI dans n8n et l'appel de webhooks n8n depuis Symfony ont représenté un niveau de complexité nettement supérieur à ce qui avait été pratiqué auparavant. La gestion du format base64 et la robustesse des appels HTTP en cas d'erreur ont été les points les plus techniques à maîtriser.`,
-        evaluation: `Mon niveau est passé d'avoir quelques notions et applications à un niveau plutôt correct : je suis capable d'intégrer une API REST dans un projet, de traiter les données échangées et de gérer les cas d'erreur de manière fiable. L'intégration d'APIs plus complexes nécessiterait encore de la pratique, mais les fondamentaux sont acquis.`
+        synthese: `Les savoir-faire élémentaires associés sont **intégrer une API REST**, **transformer et exploiter des données**, **gérer les erreurs et les réponses** et **appeler un service externe via HTTP**, présents dans les traces 1 et 4. Une légère base existait avant le stage, mais l'intégration de l'API OpenAI dans n8n et l'appel de webhooks depuis Symfony étaient bien plus complexes que ce qui avait été pratiqué avant. Aussi, la gestion du format base64 et les appels HTTP d'API complexe ont été les points les plus techniques à maîtriser.`,
+        evaluation: `Mon niveau est passé d'avoir quelques notions et applications à un niveau plutôt correct : je suis capable d'intégrer une API REST dans un projet, de traiter les données échangées et de gérer les cas d'erreur de manière fiable. L'intégration d'APIs plus complexes nécessiterait encore de la pratique, mais la base est acquis.`
       },
       {
         title: "Concevoir et automatiser des workflows métiers avec n8n",
-        synthese: `Les savoir-faire élémentaires associés sont **intégrer une API REST**, **transformer et exploiter des données** et **gérer les erreurs et les réponses**, illustrés par la trace 1. n8n était un outil totalement inconnu avant le stage, découvert et appris entièrement en autonomie. La prise en main a été relativement rapide grâce à l'interface visuelle de l'outil, mais la complexité est montée lors de la gestion des formats de données et de l'intégration avec l'API OpenAI.`,
-        evaluation: `Avant le stage, je n'avais jamais conçu de workflow. Aujourd'hui, mon niveau est correct : je suis capable de concevoir et déployer un workflow n8n fonctionnel, intégrant des appels API, des transformations de données et une gestion des erreurs. La maîtrise des cas les plus avancés comme les workflows conditionnels complexes ou le débogage de longues chaînes de nœuds reste encore à consolider.`
+        synthese: `Les savoir-faire élémentaires associés sont **concevoir et automatiser des workflows**, **transformer et exploiter des données** et **gérer les erreurs et les réponses**, illustrés par la trace 1. n8n était un outil totalement inconnu avant le stage, je l'aidécouvert et appris en créant un workflow de tutoriel. La prise en main a été relativement rapide grâce à l'interface visuelle de l'outil, mais la complexité est montée lors de la gestion des formats de données et de l'intégration avec l'API OpenAI.`,
+        evaluation: `Avant le stage, je n'avais jamais conçu de workflow. Aujourd'hui, mon niveau est correct : je suis capable de concevoir et déployer un workflow n8n fonctionnel, intégrant des appels API, des transformations de données et une gestion des erreurs. La création de workflows bien plus complexes  nécessiterait encore de la pratique.`
       }
     ],
   },
@@ -159,14 +162,58 @@ export const sections = {
 
           `J'ai du **analyser les besoins métier** avec mon maître de stage et Manuel (alternant en developpement d'applications spécifiques) pour créer la section **2.1 Vision** et définir les objectifs de l'entreprise : centraliser tous les workflows, contrôler les accès et assurer un suivi des exécutions. Ces besoins ont ensuite été traduits en objectifs concrets, notamment la restriction d'exécution aux utilisateurs autorisés et la simplicité des interfaces.`,
 
-          `La trace 6 montre aussi le fait quej'ai du **rédiger un cahier des charges structuré** en me basant sur un ancien cahier des charges pour reprendre sa structure. Le document est organisé en  plusieurs sections (vision, enjeux, périmètre, objectif fonctionnel), chacune répondant à une question précise. La section **2.2 Enjeux** synthétise les gains attendus (gain de temps, facilité d'accès, contrôle et sécurité), tandis que la section **2.4 Objectif fonctionnel** définit ce que l'application doit permettre de voir, déclencher et suivre les workflows dans une application sécurisée. La section **2.4.1** détaille même la structure attendue de chaque workflow, posant les bases de la modélisation de données à venir.`,
+          `La trace 6 montre aussi le fait que j'ai du **rédiger un cahier des charges structuré** en me basant sur un ancien cahier des charges pour reprendre sa structure. Le document est organisé en  plusieurs sections (vision, enjeux, périmètre, objectif fonctionnel), chacune répondant à une question précise. La section **2.2 Enjeux** synthétise les gains attendus (gain de temps, facilité d'accès, contrôle et sécurité), tandis que la section **2.4 Objectif fonctionnel** définit ce que l'application doit permettre de voir, déclencher et suivre les workflows dans une application sécurisée. La section **2.4.1** détaille même la structure attendue de chaque workflow, posant les bases de la modélisation de données à venir.`,
 
           `Enfin, les sections **2.3 Périmètre** et **2.4 Objectif fonctionnel** illustrent ma capacité à **définir les contraintes et le périmètre** du projet : le périmètre est limité par la problématique d'accessibilité, de sécurité et de dispersion des workflows n8n, garantissant un cadre précis avant d'entrer dans la phase de développement.`
         ]
       },
-      { slug: 'trace-7', label: 'Trace 7', title: 'Communication' },
-      { slug: 'bilan', label: 'Bilan', title: 'Bilan' }
-    ]
+      { 
+        slug: 'trace-7', 
+        label: 'Trace 7', 
+        title: "Cohérence entre maquette et application finale — ANT",
+        image: maquette,
+        image2: img_maquette_finale,
+        legend: "Trace 7.1 : Maquette et arborescence de l'interface — cahier des charges ANT",
+        legend2: "Trace 7.2 : Application ANT finale — Home Page utilisateur",
+        skills: [
+          { label: 'traduire les besoins en maquettes fonctionnelles', color: '#C0C0C0' },
+          { label: 'utiliser les maquettes comme base de développement', color: '#006400' },
+          { label: 'vérifier la cohérence entre conception et réalisation', color: '#FFFF00' },
+          { label: 'rédiger un cahier des charges structuré', color: '#0000CD' },
+        ],
+        content: [
+          `La trace 7 est composée de deux éléments complémentaires : la trace 7.1 présente la maquette et le schéma d'arborescence issus du cahier des charges que j'ai du**rédiger un cahier des charges structuré** avec des maquettes et shémas détaillant la futur application, et la trace 7.2 montre l'application **ANT** finale. Cette mise en parallèle illustre comment j'ai fait pour **traduire les besoins en maquettes fonctionnelles** avant toute phase de développement, en m'appuyant sur le schéma d'arborescence (section 3.3) pour structurer les écrans et les parcours utilisateurs.`,
+
+          `La trace 7.1 montre que j'ai aussi voulu **utiliser les maquettes comme base de développement** : la structure générale, sidebar à gauche, liste des workflows à droite, m'a servi d'aide et de repère tout au long du projet. Les éléments fondamentaux prévus (accueil, historique, gestion des accès) sont bien présents dans l'application finale visible sur la trace 7.2.`,
+
+          `La comparaison des traces 7.1 et 7.2 permet de **vérifier la cohérence entre conception et réalisation** : la structure globale est respectée, mais plusieurs évolutions ont vu le jour au fil du développement. Dans la sidebar, "Créer un exécutable" est devenu une section **Administration** complète avec un CRUD, et "Accès" a évolué en **"Gérer les accès et paramètres"** (encadrés en rouge sur la trace 7.2). Ces changements reflètent une meilleure compréhension des besoins au fur et à mesure du projet.`,
+
+          `Sur la Home Page visible en trace 7.2, des ajouts majeurs n'étaient pas prévus dans la maquette : le bouton **Paramètres workflows** (cerclé en rouge en haut à droite), permettant de configurer les variables globales, et les boutons **Sélection des variables** (cerclés en rouge) sur chaque workflow, permettant de personnaliser les paramètres avant exécution. Ces fonctionnalités ont émergé suite aux retours de mon maître de stage et de Manuel, ce qui montre que j'ai su faire évoluer le projet de manière itérative tout en restant cohérent avec la conception initiale.`
+        ]
+      },
+      { 
+        slug: 'bilan_des_savoir-faire_suivi-de-projet', 
+        label: 'Bilan et évaluation', 
+        title: 'Bilan des savoir-faire de suivi de projet' 
+      }
+    ],
+    bilan: [
+      {
+        title: "Construire un projet à partir de zéro grâce à un cahier des charges",
+        synthese: `Les savoir-faire élémentaires mobilisés autour de ce savoir-faire général sont **analyser les besoins métier**, **rédiger un cahier des charges structuré**, **définir les contraintes et le périmètre** et **structurer un projet en l'absence d'existant**, mis en œuvre dans la trace 6 et 7. Avant le stage, je n'avais rédigé qu'un seul cahier des charges en cours. Ici, j'ai dû le concevoir de A à Z, sans existant, en recueillant les besoins directement auprès de mon maître de stage et de Manuel, puis en les structurant en un document complet avant la phase de développement de l'application.`,
+        evaluation: `Mon niveau est passé de faible à correct : je suis désormais capable d'analyser des besoins, de les traduire en un cahier des charges structuré et de définir un périmètre précis avant de démarrer un projet. La rédaction d'un CDC complet en autonomie, sur un projet réel et sans base existante, a été l'apprentissage principal de ce savoir-faire.`
+      },
+      {
+        title: "Organiser et suivre le projet avec GitLab",
+        synthese: `Les savoir-faire élémentaires associés sont **utiliser GitLab pour versionner le projet**, **découper et organiser les tâches** et **assurer l'amélioration continue**, illustrés par la trace 5. J'avais déjà un bon niveau sur GitLab avant le stage, acquis lors des projets developpés en cours et pour les SAE. L'utilisation durant le stage est restée relativement classique : commits réguliers, historique traçable, ... . Je n'ai pas eu l'occasion d'utiliser les fonctionnalités avancées de GitLab.`,
+        evaluation: `Mon niveau est resté bon, sans évolution importante sur ce savoir-faire. L'utilisation de GitLab a été simple et efficace tout au long du projet, mais limitée aux fonctionnalités de base. Tout ce que j'ai fait concernant GitLab durant le stage, je le faisais déjà avant à l'IUT, nottement pour les projets en groupe.`
+      },
+      {
+        title: "Assurer la cohérence entre conception et réalisation",
+        synthese: `Les savoir-faire élémentaires associés sont **traduire les besoins en maquettes fonctionnelles**, **utiliser les maquettes comme base de développement** et **vérifier la cohérence entre conception et réalisation**, illustrés par la trace 7. Avant le stage, je réfléchissais peu à la conception avant de commencer le développement, ce qui menait parfois à des incohérences en cours de réalisation. Sur ce projet, j'ai pris le temps de concevoir des maquettes et un schéma d'arborescence avant de coder, ce qui a structuré le développement et facilité les échanges avec mon maître de stage et Manuel.`,
+        evaluation: `Mon niveau est passé de moyen à correct : je sais maintenant traduire des besoins en maquettes fonctionnelles et de les utiliser comme référence tout au long du développement. La comparaison entre la trace 7.1 et la trace 7.2 montre que la cohérence entre conception et réalisation a été globalement respectée, même si certaines fonctionnalités ont évolué en cours de projet suite aux retours et aux nouvelles contraintes rencontrées.`
+      }
+    ],
   },
   integration: {
     key: 'integration',

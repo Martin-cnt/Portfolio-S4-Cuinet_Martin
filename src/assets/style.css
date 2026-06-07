@@ -403,8 +403,8 @@ li strong {
 
 .trace-content {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
+  flex-direction: row;
+  gap: 16px;
   margin-top: 18px;
 }
 
@@ -502,4 +502,29 @@ li strong {
   margin: 20px 0;
   display: block;
   min-height: 1px;
+}
+
+.trace-content .trace-image {
+  flex: 1;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  cursor: zoom-out;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  object-fit: contain;
 }
