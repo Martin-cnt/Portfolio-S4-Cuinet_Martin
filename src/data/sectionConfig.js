@@ -160,13 +160,13 @@ export const sections = {
           { label: "structurer un projet en l'absence d'existant", color: '#f59e0b' }
         ],
         content: [
-          `Avant toute phase de développement, aucun outil centralisé n'existait chez Vétoquinol pour gérer les workflows n8n,comme l'indique la section **2.5** : "Aucun élément existant à ce jour". La trace 6 est l'extrait du cahier des charges que j'ai rédigé en début de stage pour **structurer un projet en l'absence d'existant**, en posant les bases du projet à partir des besoins exprimés par l'entreprise.`,
+          `Avant toute phase de développement, aucun outil centralisé n'existait chez Vétoquinol pour gérer les workflows n8n,comme l'indique la section **2.5** : "Aucun élément existant à ce jour" (encadré rouge). La trace 6 est l'extrait du cahier des charges que j'ai rédigé en début de stage pour **structurer un projet en l'absence d'existant**, en posant les bases du projet à partir des besoins exprimés par l'entreprise.`,
 
           `J'ai du **analyser les besoins métier** avec mon maître de stage et Manuel (alternant en developpement d'applications spécifiques) pour créer la section **2.1 Vision** et définir les objectifs de l'entreprise : centraliser tous les workflows, contrôler les accès et assurer un suivi des exécutions. Ces besoins ont ensuite été traduits en objectifs concrets, notamment la restriction d'exécution aux utilisateurs autorisés et la simplicité des interfaces.`,
 
           `La trace 6 montre aussi le fait que j'ai du **rédiger un cahier des charges structuré** en me basant sur un ancien cahier des charges pour reprendre sa structure. Le document est organisé en  plusieurs sections (vision, enjeux, périmètre, objectif fonctionnel), chacune répondant à une question précise. La section **2.2 Enjeux** synthétise les gains attendus (gain de temps, facilité d'accès, contrôle et sécurité), tandis que la section **2.4 Objectif fonctionnel** définit ce que l'application doit permettre de voir, déclencher et suivre les workflows dans une application sécurisée. La section **2.4.1** détaille même la structure attendue de chaque workflow, posant les bases de la modélisation de données à venir.`,
 
-          `Enfin, les sections **2.3 Périmètre** et **2.4 Objectif fonctionnel** illustrent ma capacité à **définir les contraintes et le périmètre** du projet : le périmètre est limité par la problématique d'accessibilité, de sécurité et de dispersion des workflows n8n, garantissant un cadre précis avant d'entrer dans la phase de développement.`
+          `Enfin, les sections **2.3 Périmètre** et **2.4 Objectif fonctionnel** (encadré bleu) illustrent ce que j'ai pensé et écrit pour **définir les contraintes et le périmètre** du projet : le périmètre est limité par la problématique d'accessibilité, de sécurité et de dispersion des workflows n8n, garantissant un cadre précis avant d'entrer dans la phase de développement.`
         ]
       },
       { 
