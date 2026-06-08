@@ -2,6 +2,6 @@
 
  `http://localhost:5173` 
 
- 'https://martin-cnt.github.io/Portfolio-S4-Cuinet_Martin/'
+ https://martin-cnt.github.io/Portfolio-S4-Cuinet_Martin/
 
 
