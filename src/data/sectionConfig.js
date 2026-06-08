@@ -19,7 +19,7 @@ export const sections = {
       { 
         slug: 'trace-1', 
         label: 'Trace 1', 
-        title: "Workflow n8n de redimensionnement d'image par IA",
+        title: "Workflow n8n de redimensionnement d'image par IA - N8N",
         image: workflow,
         legend: "Trace 1 : workflow n8n de redimensionnement d'image par IA (GPT-Image-2) — workflow entier",
         skills: [
@@ -77,9 +77,9 @@ export const sections = {
       { 
         slug: 'trace-4', 
         label: 'Trace 4', 
-        title: "Contrôleur d'exécution des workflows — WorkflowExecutionController.php",
+        title: "Contrôleur et routes d'exécution des workflows — ANT",
         image: route,
-        legend: "Trace 4 : WorkflowExecutionController.php de l'application ANT — routes, logique d'exécution et appel webhook vers n8n.",
+        legend: "Trace 4 : *Controlleur WorkflowExecutionController.php — routes pour consulter l'historique et déclencher un workflow.",
         skills: [
           { label: 'créer des routes et contrôleurs Symfony', color: '#7FFF00' },
           { label: 'utiliser le framework Symfony', color: '#fb923c' },
@@ -126,7 +126,7 @@ export const sections = {
   suivi: {
     key: 'suivi',
     title: 'Suivi de projet',
-    intro: 'Cette partie présente les savoir-faire de suivi de projet développés pendant le stage.',
+    intro: 'Cette partie présente les savoir-faire de suivi de projet maitrisés durant le stage.',
     tabs: [
       { 
         slug: 'trace-5', 
@@ -152,7 +152,7 @@ export const sections = {
         label: 'Trace 6', 
         title: "Cahier des charges de l'application ANT",
         image: cdc,
-        legend: "Trace 6 : extrait du cahier des charges de l'application ANT — définition du projet, objectifs, enjeux et périmètre.",
+        legend: "Trace 6 : extrait du cahier des charges de l'application ANT — Section Définition du projet",
         skills: [
           { label: 'analyser les besoins métier', color: '#a78bfa' },
           { label: 'rédiger un cahier des charges structuré', color: '#0000CD' },
@@ -175,8 +175,8 @@ export const sections = {
         title: "Cohérence entre maquette et application finale — ANT",
         image: maquette,
         image2: img_maquette_finale,
-        legend: "Trace 7.1 : Maquette et arborescence de l'interface — cahier des charges ANT",
-        legend2: "Trace 7.2 : Application ANT finale — Home Page utilisateur",
+        legend: "Trace 7.1 : Maquette et arborescence de l'interface — page d'accueil des administrateurs réalisée avec Figma",
+        legend2: "Trace 7.2 : Application ANT finale — Home Page des administrateurs de mon application ANT",
         skills: [
           { label: 'traduire les besoins en maquettes fonctionnelles', color: '#C0C0C0' },
           { label: 'utiliser les maquettes comme base de développement', color: '#006400' },
@@ -227,7 +227,7 @@ export const sections = {
         label: 'Trace 8', 
         title: "Organigramme de l'équipe de développement d'applications spécifiques et l'équipe intégration",
         image: org,
-        legend: "Trace 8 : organigramme de l'équipe dans laquelle j'ai effectué mon stage chez Vétoquinol. Il y a 2 équipes distinctes : développement d'applications spécifiques (3 personnes et moi) et intégration (3 personnes). Mon maitre de stage est le responsable des 2 équipes.",
+        legend: "Trace 8 : organigramme de l'équipe dans laquelle j'ai effectué mon stage chez Vétoquinol - Organigramme anonymisé pour respecter la confidentialité de l'entreprise.",
         skills: [
           { label: "identifier l'organisation et les rôles de l'équipe", color: '#a78bfa' },
           { label: "s'adapter à l'environnement professionnel", color: '#fb923c' },
@@ -249,7 +249,7 @@ export const sections = {
         label: 'Trace 9', 
         title: "Note OneNote — échange technique avec l'équipe",
         image: note,
-        legend: "Trace 9 : note OneNote prise suite à un échange avec un collègue.",
+        legend: "Trace 9 : note OneNote prise suite à un échange avec un collègue lors d'une réunion",
         skills: [
           { label: "communiquer avec les encadrants et l'équipe", color: '#34d399' },
           { label: "s'adapter à l'environnement professionnel", color: '#fb923c' },
@@ -257,9 +257,9 @@ export const sections = {
           { label: "s'intégrer dans une équipe de travail", color: '#38bdf8' }
         ],
         content: [
-          `La trace 9 est une note écrite sur **OneNote** le 7 mai 2026, suite à un échange avec un collègue de l'équipe. La sidebar à gauche montre l'organisation de mon espace de travail : une section **"Notes rapides"** et une section **"réunion"** contenant plusieurs pages de notes (Interaction api copilot, Workflow scrap image, N8N). Cet outil fait partie de la suite **Microsoft 365** utilisée en interne chez Vétoquinol, tout comme **Teams** et **Outlook** visibles dans la barre des tâches, ce qui illustre la nécessité de **s'approprier les technologies de l'entreprise** dès les premiers jours du stage.`,
+          `La trace 9 est une note écrite sur **OneNote** le 7 mai 2026, suite à un échange avec un collègue de l'équipe. La sidebar à gauche montre l'organisation de mon espace de travail : une section **"Notes rapides"** et une section **"réunion"** (encadré bleu) contenant plusieurs pages de notes (Interaction api copilot, Workflow scrap image, N8N). Cet outil fait partie de la suite **Microsoft 365** utilisée en interne chez Vétoquinol, tout comme **Teams** et **Outlook** visibles dans la barre des tâches, ce qui illustre la nécessité de **s'approprier les technologies de l'entreprise** dès les premiers jours du stage.`,
 
-          `L'utilisation de **Teams** et **Outlook** au quotidien a été importante pour **communiquer avec les encadrants et l'équipe** : j'utilisais Teams pour les échanges rapides et les questions techniques avec mes collègues (Manuel, Salomé, ...), et Outlook pour les communications plus professionnelles. Ces outils me permettent aussi de consulter les réunions futurs ou les évènements importants de l'entreprise à venir, et de m'organiser en conséquence.`,
+          `L'utilisation de **Teams** et **Outlook** (encadré rouge) au quotidien a été importante pour **communiquer avec les encadrants et l'équipe** : j'utilisais Teams pour les échanges rapides et les questions techniques avec mes collègues (Manuel, Salomé, ...), et Outlook pour les communications plus professionnelles. Ces outils me permettent aussi de consulter les réunions futurs ou les évènements importants de l'entreprise à venir, et de m'organiser en conséquence.`,
 
           `Cette note illustre un échange que j'ai eu avec un collègue lors d'une réunion sur l'intégration de **Copilot M365** avec n8n. Il m'a expliqué les différentes approches possibles (Direct Line API, webhook, Power Automate). Participer à des réunions techniques et échanger régulièrement avec l'équipe est une manière de **s'intégrer dans une équipe de travail**, et c'est ce que j'ai fait chez Vétoquinol.`,
 
