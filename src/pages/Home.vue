@@ -28,7 +28,7 @@
       <p>Voici une synthèse des savoir-faire que j’ai pu acquérir et développer au cours de mon stage, classés en trois catégories : technique, suivi de projet et intégration en entreprise.</p><br>
       <h3><strong>Savoir-faire techniques :</strong></h3>
       <ul>
-        <li><strong><a href="/technique/trace-3">Développer une application web avec PHP Symfony</a></strong> — développement de fonctionnalités backend structurées en MVC, routes, contrôleurs, services, gestion des formulaires et échanges avec la base de données pour répondre aux besoins métiers.</li>
+        <li><strong>Développer une application web avec PHP Symfony</strong> — développement de fonctionnalités backend structurées en MVC, routes, contrôleurs, services, gestion des formulaires et échanges avec la base de données pour répondre aux besoins métiers.</li>
         <li><strong>Concevoir et gérer une base de données avec phpMyAdmin</strong> — modélisation de bases de données relationnelles, rédaction de requêtes SQL et administration pour assurer la cohérence et la fiabilité des données applicatives.</li>
         <li><strong>Intégrer et exploiter des API / services externes</strong> — connexion de services via API REST et Webhooks, transformation des données retournées et gestion des erreurs pour garantir la fiabilité des échanges entre systèmes.</li>
         <li><strong>Concevoir et automatiser des workflows métiers</strong> — conception de workflows automatisés avec n8n, enchaînement de tâches, conditions et triggers connectant différentes sources pour automatiser des processus redondants.</li>
