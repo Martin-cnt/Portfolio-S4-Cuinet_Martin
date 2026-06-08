@@ -160,7 +160,7 @@ export const sections = {
           { label: "structurer un projet en l'absence d'existant", color: '#f59e0b' }
         ],
         content: [
-          `Avant toute phase de développement, aucun outil centralisé n'existait chez Vétoquinol pour gérer les workflows n8n,comme l'indique la section **2.5** : "Aucun élément existant à ce jour" (encadré rouge). La trace 6 est l'extrait du cahier des charges que j'ai rédigé en début de stage pour **structurer un projet en l'absence d'existant**, en posant les bases du projet à partir des besoins exprimés par l'entreprise.`,
+          `Avant toute phase de développement, aucun outil centralisé n'existait chez Vétoquinol pour gérer les workflows n8n, comme l'indique la section **2.5** : "Aucun élément existant à ce jour" (encadré rouge). La trace 6 est l'extrait du cahier des charges que j'ai rédigé en début de stage pour **structurer un projet en l'absence d'existant**, en posant les bases du projet à partir des besoins exprimés par l'entreprise.`,
 
           `J'ai du **analyser les besoins métier** avec mon maître de stage et Manuel (alternant en developpement d'applications spécifiques) pour créer la section **2.1 Vision** et définir les objectifs de l'entreprise : centraliser tous les workflows, contrôler les accès et assurer un suivi des exécutions. Ces besoins ont ensuite été traduits en objectifs concrets, notamment la restriction d'exécution aux utilisateurs autorisés et la simplicité des interfaces.`,
 
