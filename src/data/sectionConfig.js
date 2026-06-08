@@ -6,6 +6,8 @@ import liste_commit from '/public/img/liste_commit.png'
 import cdc from '/public/img/cdc_ant.png'
 import maquette from '/public/img/maquette.png'
 import img_maquette_finale from '/public/img/img_maquette_finale.png'
+import org from '/public/img/org.png'
+import note from '/public/img/note.png'
 
 
 export const sections = {
@@ -106,7 +108,7 @@ export const sections = {
       },
       {
         title: "Concevoir et gérer une base de données avec phpMyAdmin",
-        synthese: `Les savoir-faire élémentaires associés sont **modéliser des tables et relations**, **administrer une base de données via phpMyAdmin** et **générer et migrer une base de données avec Doctrine**, visibles sur la trace 3. Si j'avais déjà une base de notion en SQL avant le stage grâce aux cours, phpMyAdmin et la gestion de migrations via Doctrine étaient en revanche totalement nouveaux pour moi. La principale difficulté a résidé dans la cohérence entre le modèle PHP et la structure SQL réelle, notamment lors des évolutions du schéma en cours de développement.`,
+        synthese: `Les savoir-faire élémentaires associés sont **modéliser des tables et relations**, **administrer une base de données via phpMyAdmin** et **générer et migrer une base de données avec Doctrine**, visibles sur les traces 2 et 3. Si j'avais déjà une base de notion en SQL avant le stage grâce aux cours, phpMyAdmin et la gestion de migrations via Doctrine étaient en revanche totalement nouveaux pour moi. La principale difficulté a résidé dans la cohérence entre le modèle PHP et la structure SQL réelle, notamment lors des évolutions du schéma en cours de développement.`,
         evaluation: `Mon niveau est passé de débutant à assez bon, car je ne connaissais pas phpMyAdmin, mais je savais gérer une base de données simple : je maîtrise désormais la conception d'un schéma relationnel complet, l'utilisation de phpMyAdmin pour administrer et déboguer une base de données, et le cycle de migration Doctrine. Il reste des aspects à approfondir comme l'optimisation des requêtes SQL sur de gros volumes de données.`
       },
       {
@@ -220,9 +222,69 @@ export const sections = {
     title: 'Intégration en entreprise',
     intro: "Cette partie présente les savoir-faire liés à l'intégration dans l'entreprise",
     tabs: [
-      { slug: 'trace-8', label: 'Trace 8', title: 'Découverte du cadre' },
-      { slug: 'trace-9', label: 'Trace 9', title: 'Premiers livrables' },
-      { slug: 'bilan', label: 'Bilan', title: 'Bilan' }
+      { 
+        slug: 'trace-8', 
+        label: 'Trace 8', 
+        title: "Organigramme de l'équipe de développement d'applications spécifiques et l'équipe intégration",
+        image: org,
+        legend: "Trace 8 : organigramme de l'équipe dans laquelle j'ai effectué mon stage chez Vétoquinol. Il y a 2 équipes distinctes : développement d'applications spécifiques (3 personnes et moi) et intégration (3 personnes). Mon maitre de stage est le responsable des 2 équipes.",
+        skills: [
+          { label: "identifier l'organisation et les rôles de l'équipe", color: '#a78bfa' },
+          { label: "s'adapter à l'environnement professionnel", color: '#fb923c' },
+          { label: "communiquer avec les encadrants et l'équipe", color: '#34d399' },
+          { label: "s'intégrer dans une équipe de travail", color: '#38bdf8' }
+        ],
+        content: [
+          `La trace 8 présente l'organigramme de l'équipe au sein de laquelle j'ai effectué mon stage chez Vétoquinol. Cet organigramme illustre la première étape de mon intégration : **identifier l'organisation et les rôles de l'équipe** afin de comprendre qui fait quoi et vers qui me tourner selon les besoins.`,
+
+          `Mon maître de stage encadre l'ensemble de l'équipe. C'est lui qui m'a confié le sujet de stage, défini les objectifs et validé les choix techniques tout au long du projet. Les échanges réguliers avec lui et les autres developpeurs d'applications spécifiques ont été essentiels pour **communiquer avec les encadrants et l'équipe**, et m'assurer que le projet répondait bien aux attentes de l'entreprise.`,
+
+           `Au quotidien, j'ai principalement collaboré avec Manuel, Salomé ainsi que Nicolas. Cette proximité permet de **s'intégrer dans une équipe de travail** et de **s'adapter à l'environnement professionnel** rapidement : partage de connaissances sur les outils internes, entraide sur les problèmes techniques et compréhension des méthodes de travail de l'équipe.`,
+
+          `L'organigramme montre également que l'équipe est composée de profils variés (développeurs, designers intégration, ...), ce qui démontre un **environnement professionnel structuré** avec des responsabilités bien définies. Cette organisation m'a appris à identifier le bon interlocuteur à qui poser des questions selon la nature du problème que je rencontrais, ou l'information dont j'avais besoin pour avancer dans le projet.`
+        ]
+      },
+      { 
+        slug: 'trace-9', 
+        label: 'Trace 9', 
+        title: "Note OneNote — échange technique avec l'équipe",
+        image: note,
+        legend: "Trace 9 : note OneNote prise suite à un échange avec un collègue.",
+        skills: [
+          { label: "communiquer avec les encadrants et l'équipe", color: '#34d399' },
+          { label: "s'adapter à l'environnement professionnel", color: '#fb923c' },
+          { label: "s'approprier les technologies de l'entreprise", color: '#FF0000' },
+          { label: "s'intégrer dans une équipe de travail", color: '#38bdf8' }
+        ],
+        content: [
+          `La trace 9 est une note écrite sur **OneNote** le 7 mai 2026, suite à un échange avec un collègue de l'équipe. La sidebar à gauche montre l'organisation de mon espace de travail : une section **"Notes rapides"** et une section **"réunion"** contenant plusieurs pages de notes (Interaction api copilot, Workflow scrap image, N8N). Cet outil fait partie de la suite **Microsoft 365** utilisée en interne chez Vétoquinol, tout comme **Teams** et **Outlook** visibles dans la barre des tâches, ce qui illustre la nécessité de **s'approprier les technologies de l'entreprise** dès les premiers jours du stage.`,
+
+          `L'utilisation de **Teams** et **Outlook** au quotidien a été importante pour **communiquer avec les encadrants et l'équipe** : j'utilisais Teams pour les échanges rapides et les questions techniques avec mes collègues (Manuel, Salomé, ...), et Outlook pour les communications plus professionnelles. Ces outils me permettent aussi de consulter les réunions futurs ou les évènements importants de l'entreprise à venir, et de m'organiser en conséquence.`,
+
+          `Cette note illustre un échange que j'ai eu avec un collègue lors d'une réunion sur l'intégration de **Copilot M365** avec n8n. Il m'a expliqué les différentes approches possibles (Direct Line API, webhook, Power Automate). Participer à des réunions techniques et échanger régulièrement avec l'équipe est une manière de **s'intégrer dans une équipe de travail**, et c'est ce que j'ai fait chez Vétoquinol.`,
+
+          `La sidebar de la trace 9 montre que j'ai organisé mes notes par thème dès le début du stage (réunion, n8n, workflows). Cette organisation est utile pour **s'adapter à l'environnement professionnel** rapidement : en conservant une trace exploitable des échanges, j'ai gagné en autonomie et limité les interruptions inutiles pour l'équipe.`,
+
+          `Enfin, le contenu de la note montre l'ensemble des technologies de l'environnement Microsoft de Vétoquinol (Copilot Studio, Power Automate, webhooks n8n) que j'ai dû maitrisé rapidement pour avancer dans le projet. Cet échange m'a permis d'identifier les contraintes techniques liées à cet environnement et d'ajuster mes choix en conséquence, cela montre ainsi la nécessité de **s'approprier les technologies de l'entreprise** pour être efficace.`
+        ]
+      },
+      {
+        slug: 'bilan_des_savoir-faire_integration-en-entreprise', 
+        label: 'Bilan et évaluation', 
+        title: 'Bilan des savoir-faire d\'intégration en entreprise' 
+      }
+    ],
+    bilan: [
+      {
+        title: "S'intégrer dans un environnement technique et professionnel",
+        synthese: `Les savoir-faire élémentaires mobilisés autour de ce savoir-faire général sont **identifier l'organisation et les rôles de l'équipe**, **communiquer avec les encadrants et l'équipe**, **s'intégrer dans une équipe de travail** et **s'adapter à l'environnement professionnel**, mis en œuvre dans la trace 8. Avant le stage, je n'avais travaillé que quelques fois dans un environnement professionnel lors d'un emploi d'été, sans réelle immersion dans une équipe de développement structurée. Ici, j'ai dû m'adapter rapidement à une organisation d'équipe, des outils internes et des méthodes de travail professionnelles que je ne connaissais pas.`,
+        evaluation: `Mon niveau est passé de très faible à correct : je suis désormais capable de m'intégrer dans une équipe professionnelle, d'identifier les bons interlocuteurs selon la situation et de communiquer efficacement avec mes collègues. Cette expérience m'a appris que l'intégration dans un environnement professionnel demande de l'adaptation technique et sociale.`
+      },
+      {
+        title: "S'approprier un environnement technique inconnu",
+        synthese: `Les savoir-faire élémentaires mobilisés sont **s'approprier les technologies de l'entreprise** et **s'adapter à l'environnement professionnel**, mis en œuvre dans les traces 8 et9. Avant le stage, je n'avais jamais été confronté à un environnement technique complet et inconnu : Symfony, n8n, la base de données phpmyAdmin, mais aussi la suite Microsoft 365 (Teams, Outlook, OneNote). J'ai dû apprendre à maitriser et utiliser l'ensemble de ces outils, en m'appuyant sur les échanges avec l'équipe et mes prises de notes.`,
+        evaluation: `Mon niveau est passé de faible à bon : au début du stage, je ne connaissais aucun des outils utilisés par l'entreprise (le framework Symfony, l'outil n8n, phpmyAdmin, ...). Mais en échangeant avec l'équipe et en prenant des notes sur les choses que je ne connaissais pas, j'ai réussi à les apprendre assez rapidement et à les utiliser efficacement tout au long du projet.`
+      }
     ]
   }
 }

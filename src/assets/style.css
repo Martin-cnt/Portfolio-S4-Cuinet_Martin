@@ -181,17 +181,22 @@ body {
 
 
 .company-logo {
-  height: 80px;
-  object-fit: contain;
+  height: 120px;
+  object-fit: cover;
   flex-shrink: 0;
   display: block;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 50px auto;
 }
 
 .section-hero h1 {
   margin: 0 0 10px;
   font-size: clamp(1.75rem, 2.5vw, 2.5rem);
   line-height: 1.05;
+}
+
+.section-hero a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .section-hero strong {
