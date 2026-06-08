@@ -3,7 +3,7 @@
     <header class="section-hero card">
       <h1>Présentation du site</h1>
       <p>Ce site présente une description et <strong>une analyse des savoir-faire </strong> techniques, 
-        du suivi de projet et de l'intégration en entreprise, acquis lors de mon stage de 
+        de suivi de projet et d'intégration en entreprise, acquis lors de mon stage de 
         deuxième année de BUT Informatique, effectué chez Vétoquinol du 7 avril au 11 juin
          2026.</p><br>
       <p>La navigation entre les différentes parties du site se fait via le menu de navigation à gauche (sidebar).</p>
